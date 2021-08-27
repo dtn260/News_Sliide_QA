@@ -1,0 +1,34 @@
+Manual Tests:
+
+User is at the login screen
+
+- Login with a valid username/password - user is sent to the News screen (logged in successfully)
+- Login with a valid username/invalid password - should not be logged in, error message should be shown
+- Login with a valid password/invalid username - should not be logged in, error message should be shown
+- Enter username and password and rotate device - values are still kept and not erased.
+- Rotate device whilst signing in (valid username and password) - User is logged in successfully
+
+
+User is succesfully logged in
+
+- User presses back and they are taken out of the application and not back to login screen.
+- Given there is no network connectivity - user is shown an error message
+- Given there is poor network connectivity - the tiles are seen loading slowly
+- No data returned from feed - no error is shown but the user is at the News screen, swiping does not do anything
+- Invalid data returned from feed - no error is shown but the user is at the News screen, swiping does not do anything
+
+User is logged in and clicks on recyclerview item and is taken to external browser
+
+- User is able to navigate back and is taken to the list of News tiles
+- User is able to navigate back and is taken to an empty news list
+- User is able to navigate back and is taken to a News screen with an error message
+
+
+Bug Reporting:
+
+- #1.3
+When user exits app after successfull login and returns to app , the user is not navigated to the page,
+but to login screen.
+
+-#2.2
+Was mentioned in the readme but there is no retry button when logging in with no internet connection.
